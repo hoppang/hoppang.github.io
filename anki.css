@@ -1,0 +1,38 @@
+/* 후리가나 크기 */
+ruby rt {
+  font-size: 0.65em; /* 기본은 0.5em 정도, 숫자를 올리면 더 커짐 */
+  color: orange;
+}
+
+.deck {
+  font-size: 12px;
+  margin: 6px;
+  text-align: center;
+}
+
+.hint {
+  background-color: #84FF66; /* Light green background */
+  color: black; /* White text */
+  padding: 4px 16px; /* Spacing around text */
+  border: none; /* Remove default border */
+  border-radius: 5px; /* Slightly rounded corners */
+  cursor: pointer; /* Indicate interactivity */
+  font-size: 16px; /* Adjust font size */
+  transition: background-color 0.3s ease; /* Smooth hover effect */
+  text-decoration:none;
+}
+
+.hint:hover {
+  background-color: #a8ff91; /* Darker blue on hover */
+}
+
+.hint::before {
+  content: "😀";
+  margin-right: 0em;
+}
+
+.해석 {
+  font-size: 16px;
+  text-shadow: 1px 1px 1px #888;
+  color: lime;
+}
