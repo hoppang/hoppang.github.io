@@ -5,11 +5,11 @@ ruby rt {
 }
 
 .deck {
+  display: inline-block; /* 텍스트 크기에 맞게 */
   background-color: transparent; /* 배경 투명 */
   padding: 4px 16px;
   border: 2px solid orange; /* 외곽선만 표시 */
-  border-radius: 8px; /* 둥근 모서리 */
-  cursor: pointer;
+  border-radius: 6px; /* 둥근 모서리 */
   text-decoration: none;
   font-size: 12px;
   margin: 6px;
