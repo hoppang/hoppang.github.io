@@ -5,6 +5,12 @@ ruby rt {
 }
 
 .deck {
+  background-color: transparent; /* 배경 투명 */
+  padding: 4px 16px;
+  border: 2px solid orange; /* 외곽선만 표시 */
+  border-radius: 8px; /* 둥근 모서리 */
+  cursor: pointer;
+  text-decoration: none;
   font-size: 12px;
   margin: 6px;
   text-align: center;
@@ -36,3 +42,4 @@ ruby rt {
   text-shadow: 1px 1px 1px #888;
   color: lime;
 }
+
