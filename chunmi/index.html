@@ -8,7 +8,7 @@
     <meta property="og:type" content="article">
     <meta property="og:title" content="춘미의 평생 가족을 찾습니다 🐾">
     <meta property="og:description" content="경기 광주에서 지내고 있는 4살 추정 믹스견 춘미의 평생 가족을 찾습니다.">
-    <meta property="og:image" content="https://hoppang.github.io/chunmi/chunmi.jpg">
+    <meta property="og:image" content="https://hoppang.github.io/chunmi/banner.jpg">
     <style>
         * {
             box-sizing: border-box;
@@ -30,22 +30,26 @@
             box-shadow: 0 4px 15px rgba(0,0,0,0.06);
             border: 1px solid #f0e6df;
         }
-        .header {
+        /* 제목은 배너 이미지에 들어 있어 화면에는 숨기고, 문서 구조와
+           스크린 리더를 위해서만 남긴다 */
+        .visually-hidden {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            margin: -1px;
+            padding: 0;
+            overflow: hidden;
+            clip: rect(0 0 0 0);
+            white-space: nowrap;
+            border: 0;
+        }
+        .lead {
             text-align: center;
-            border-bottom: 2px dashed #f0d5c0;
-            padding-bottom: 20px;
-            margin-bottom: 20px;
-        }
-        .header h1 {
-            color: #d96b27;
-            font-size: 1.6rem;
-            margin: 0 0 8px 0;
-            font-weight: bold;
-        }
-        .header p {
             color: #776655;
-            font-size: 0.95rem;
-            margin: 0;
+            font-size: 0.92rem;
+            margin: 0 0 20px 0;
+            padding-bottom: 18px;
+            border-bottom: 2px dashed #f0d5c0;
         }
         .photo-area img {
             width: 100%;
@@ -261,14 +265,13 @@
 </head>
 <body>
     <div class="container">
-        <div class="header">
-            <h1>춘미의 평생 가족을 찾습니다 🐾</h1>
-            <p>경기 광주에서 지내고 있습니다.<br>충분히 이야기 나눈 뒤 천천히 결정하셔도 괜찮습니다.</p>
-        </div>
+        <h1 class="visually-hidden">춘미의 평생 가족을 찾습니다</h1>
 
         <div class="photo-area">
-            <img src="chunmi.jpg" alt="산책 중 앉아서 카메라를 보는 춘미">
+            <img src="banner.jpg" alt="춘미의 새 가족을 찾습니다. 사람을 좋아하고 산책을 즐기는 춘미의 평생 가족이 되어주세요. 4살 추정, 12kg, 중성화 완료.">
         </div>
+
+        <p class="lead">경기 광주에서 지내고 있습니다.<br>충분히 이야기 나눈 뒤 천천히 결정하셔도 괜찮습니다.</p>
 
         <!-- 사진첩: 그리드는 썸네일, 크게 보기는 data-full 원본을 씁니다 -->
         <div class="gallery" id="gallery">
