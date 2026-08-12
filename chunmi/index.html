@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>춘미의 평생 가족을 찾습니다 🐾</title>
-    <meta name="description" content="경기 광주에서 지내고 있는 4살 추정 믹스견 춘미의 평생 가족을 찾습니다. 중성화 완료, 예방접종 2차 완료, 4DX 정상.">
+    <meta name="description" content="경기 광주에서 지내는 4살 추정, 12kg 암컷 믹스견 춘미의 평생 가족을 찾습니다. 중성화·예방접종·내장칩 삽입 완료, 4DX 정상.">
     <meta property="og:type" content="article">
     <meta property="og:title" content="춘미의 평생 가족을 찾습니다 🐾">
-    <meta property="og:description" content="경기 광주에서 지내고 있는 4살 추정 믹스견 춘미의 평생 가족을 찾습니다.">
+    <meta property="og:description" content="사람을 좋아하고 산책을 즐기는 4살 추정 춘미의 평생 가족을 찾습니다.">
     <meta property="og:image" content="https://hoppang.github.io/chunmi/banner.jpg">
     <style>
         * {
@@ -50,6 +50,41 @@
             margin: 0 0 20px 0;
             padding-bottom: 18px;
             border-bottom: 2px dashed #f0d5c0;
+        }
+        .positives {
+            margin: 0 0 16px 0;
+        }
+        .positives-title {
+            margin: 0 0 10px 0;
+            color: #c85a17;
+            text-align: center;
+            font-size: 1.08rem;
+        }
+        .positives-list {
+            list-style: none;
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 8px;
+            margin: 0;
+            padding: 0;
+        }
+        .positives-list li {
+            display: flex;
+            align-items: center;
+            min-height: 48px;
+            padding: 9px 10px;
+            border-radius: 10px;
+            background: #fff7ef;
+            color: #5f4937;
+            font-size: 0.86rem;
+            font-weight: 600;
+        }
+        .positives-list li::before {
+            content: "✓";
+            flex: 0 0 auto;
+            margin-right: 7px;
+            color: #d66b2b;
+            font-weight: 800;
         }
         .photo-area img {
             width: 100%;
@@ -236,9 +271,36 @@
         .notice-box li:last-child {
             margin-bottom: 0;
         }
+        .considerations-box {
+            background-color: #fff9f3;
+            border: 1px solid #efd8c4;
+            border-radius: 10px;
+            padding: 14px;
+            font-size: 0.88rem;
+            color: #5b4635;
+            margin-bottom: 20px;
+        }
+        .considerations-box p {
+            margin: 0 0 10px 0;
+        }
+        .considerations-box ul {
+            margin: 0;
+            padding-left: 18px;
+        }
+        .considerations-box li {
+            margin-bottom: 8px;
+        }
+        .considerations-box li:last-child {
+            margin-bottom: 0;
+        }
         .cta-container {
             text-align: center;
             margin-top: 25px;
+        }
+        .cta-container.early {
+            margin: 0 0 22px 0;
+            padding-bottom: 20px;
+            border-bottom: 2px dashed #f0d5c0;
         }
         .btn-kakao {
             display: block;
@@ -261,6 +323,19 @@
             font-size: 0.8rem;
             margin-top: 10px;
         }
+        @media (max-width: 380px) {
+            body {
+                padding: 10px 8px;
+            }
+            .container {
+                padding: 18px 14px;
+                border-radius: 12px;
+            }
+            .positives-list li {
+                padding: 8px;
+                font-size: 0.8rem;
+            }
+        }
     </style>
 </head>
 <body>
@@ -272,6 +347,23 @@
         </div>
 
         <p class="lead">경기 광주에서 지내고 있습니다.<br>충분히 이야기 나눈 뒤 천천히 결정하셔도 괜찮습니다.</p>
+
+        <section class="positives" aria-labelledby="positives-title">
+            <h2 class="positives-title" id="positives-title">춘미는 이런 아이예요</h2>
+            <ul class="positives-list">
+                <li>사람에게 순한 편이에요</li>
+                <li>산책을 좋아해요</li>
+                <li>눈에 띄는 헛짖음이 없어요</li>
+                <li>눈에 띄는 분리불안이 없어요</li>
+            </ul>
+        </section>
+
+        <div class="cta-container early">
+            <a href="https://open.kakao.com/o/stBkJzFi" class="btn-kakao">
+                💬 춘미가 궁금하다면 편하게 문의하기
+            </a>
+            <div class="footer-text">바로 결정하지 않으셔도 괜찮습니다. 궁금한 점부터 편하게 물어보세요.</div>
+        </div>
 
         <!-- 사진첩: 그리드는 썸네일, 크게 보기는 data-full 원본을 씁니다 -->
         <div class="gallery" id="gallery">
@@ -292,15 +384,6 @@
             </button>
             <button type="button" data-full="imgs/20250501_102037.jpg" data-caption="비 오는 날에도 산책은 좋아합니다">
                 <img src="imgs/thumbs/20250501_102037.jpg" alt="비에 젖은 보도블록 위를 걷는 춘미" loading="lazy">
-            </button>
-            <button type="button" data-full="imgs/20250503_113819.jpg" data-caption="고양이를 좋아해요">
-                <img src="imgs/thumbs/20250503_113819.jpg" alt="길고양이와 마주 서 있는 춘미" loading="lazy">
-            </button>
-            <button type="button" data-full="imgs/20251114_142637.jpg" data-caption="산책길에서 만난 다른 강아지와 인사">
-                <img src="imgs/thumbs/20251114_142637.jpg" alt="다른 강아지와 인사하는 춘미" loading="lazy">
-            </button>
-            <button type="button" data-full="imgs/20260313_085646.jpg" data-caption="응가하는 춘미">
-                <img src="imgs/thumbs/20260313_085646.jpg" alt="마른 풀밭에서 배변 중인 춘미" loading="lazy">
             </button>
         </div>
         <div class="gallery-hint">사진을 누르면 크게 볼 수 있습니다</div>
@@ -334,7 +417,7 @@
             </tr>
             <tr>
                 <th>예방접종</th>
-                <td>2차 접종 완료</td>
+                <td>완료</td>
             </tr>
             <tr>
                 <th>건강</th>
@@ -350,32 +433,29 @@
             </tr>
             <tr>
                 <th>짖음 / 분리불안</th>
-                <td>헛짖음 거의 없음 / 분리불안 없음</td>
+                <td>눈에 띄는 헛짖음이나 분리불안 없음</td>
             </tr>
             <tr>
                 <th>식성</th>
                 <td>아주 좋음</td>
             </tr>
-            <tr>
-                <th>배변</th>
-                <td>실외배변</td>
-            </tr>
-            <tr>
-                <th>산책</th>
-                <td>하루 2회 정도 필요합니다 (비·눈이 와도 나가야 합니다)</td>
-            </tr>
-            <tr class="highlight">
-                <th>어린아이</th>
-                <td>어린아이가 적극적으로 만지려고 하는 상황은 불편해하는 편입니다. <b>영유아가 없는 가정, 또는 아이와 춘미의 공간을 충분히 분리할 수 있는 가정을 선호합니다.</b></td>
-            </tr>
         </table>
+
+        <div class="section-title">🌿 함께 살기 전 꼭 알아주세요</div>
+        <div class="considerations-box">
+            <p>춘미와 가족 모두가 편안하게 지내기 위해 꼭 확인하고 싶은 생활 조건입니다.</p>
+            <ul>
+                <li><b>실외배변</b>을 해서 매일 하루 2회 정도 산책이 필요합니다. 비나 눈이 오는 날에도 외출해야 합니다.</li>
+                <li>어린아이가 적극적으로 만지려고 하는 상황은 불편해하는 편입니다. <b>영유아가 없는 가정, 또는 아이와 춘미의 공간을 충분히 분리할 수 있는 가정</b>을 선호합니다.</li>
+            </ul>
+        </div>
 
         <!-- 입양 조건 및 절차 -->
         <div class="section-title">💛 입양 조건 및 절차</div>
         <div class="notice-box">
             <ul>
                 <li>입양 전 충분히 대화를 나눈 뒤 결정하고 싶습니다.</li>
-                <li>실외배변을 하기 때문에 <b>매일 산책이 가능한 환경</b>인지 함께 확인하고 싶습니다.</li>
+                <li>춘미에게 필요한 <b>매일 산책이 가능한 환경</b>인지 함께 확인하고 싶습니다.</li>
                 <li>가능하다면 입양 후에도 가끔 춘미 소식을 전해주시면 감사하겠습니다.</li>
                 <li>목줄, 자동급여기, 비옷 등 춘미가 쓰던 용품은 원하시면 함께 드립니다.</li>
                 <li>책임비는 받지 않습니다. 대신 입양이 결정되면 반려동물등록을 새 보호자 명의로 정상적으로 변경합니다.</li>
